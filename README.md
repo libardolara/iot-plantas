@@ -41,9 +41,42 @@ $ git clone https://github.com/libardolara/iot-plantas
 
 ### 2. Configuración del Arduino IDE
 
+Se debe configurar el Arduino IDE para trabajar con la tarjeta Node MCU ESP8266 y con el sensor de luz. Para esto debes tener instalado [Arduino IDE](https://www.arduino.cc/en/Main/Software).
+
+#### Configurar Administrador de la Tarjeta
+
+* Abre **Arduino IDE**
+* Ve al menú _Archivo -> Preferencias_ y en el campo para adicionar una URL para administrar tarjetas agrega la url para la tarjeta ESP8266 http://arduino.esp8266.com/stable/package_esp8266com_index.json
+* En el menú _Herramientas -> Board... -> Administrador de Tarjetas..._
+* En el buscador de la ventana emergente escribe **esp**
+* Selecciona el administrador para la tarjeta ESP8266, antes de hacer click en instalar asegurate que la version sea la ultima.
+* Espera mientras instala el administrador de la tarjeta.
+* En el menú _Herramientas -> Board..._ selecciona la tarjeta NodeMCU (ESP-12E Module)
+
+#### Agregar librerias
+
+* Ve al menú _Sketch -> Include Library -> Add .ZIP Library..._.
+* Selecciona el archivo [](pubsubclient-2.3.zip) para instalar la libreria de mensajeria MQTT.
+* Ve al menú _Sketch -> Include Library -> Add .ZIP Library..._.
+* Selecciona el archivo [](BH1750-master.zip) para instalar la libreria del sensor de luz.
 
 ### 3. Conectar y probar el sensor de humedad
 
+Conecta la tarjeta ESP8266 con el sensor de humedad, el transductor y las resistencias. Sigue el diagrama:
+
+![](img/diagram_humidity)
+
+* Conecta la tarjeta a tu puerto USB
+* Abre el archivo [](codes/humidity_sensor.ccp), copia el contenido y pegalo en el editor del Arduino IDE
+* Ve al menú _Herramientas -> Port... ->_ y selecciona un puerto USB (COM*)
+
+> Si utilizas MacOS instala primero el driver para usar el puerto USB de https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
+* Haz click en el boto de ejecutar el código.
+* Espera la compilación del programa, si falla vuelve a intentarlo cambiando de puerto en el IDE.
+* Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
+
+![](img/humidity_monitor.png)
 
 ### 4. Conectar y probar el sensor de luz
 
@@ -54,9 +87,9 @@ $ git clone https://github.com/libardolara/iot-plantas
 ### 6. Registro del dispositivo
 
 
-### 8. Crear tableros
+### 7. Crear tableros
 
 
-### 9. Crear interfaces
+### 8. Crear interfaces
 
 
