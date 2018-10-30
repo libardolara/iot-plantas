@@ -64,7 +64,7 @@ Se debe configurar el Arduino IDE para trabajar con la tarjeta Node MCU ESP8266 
 
 Conecta la tarjeta ESP8266 con el sensor de humedad, el transductor y las resistencias. Sigue el diagrama:
 
-![](img/diagram_humidity)
+![](img/diagram_humidity.png)
 
 * Conecta la tarjeta a tu puerto USB
 * Abre el archivo [](codes/humidity_sensor.ccp), copia el contenido y pegalo en el editor del Arduino IDE
