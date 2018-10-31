@@ -76,7 +76,11 @@ Conecta la tarjeta ESP8266 con el sensor de humedad, el transductor y las resist
 * Espera la compilación del programa, si falla vuelve a intentarlo cambiando de puerto en el IDE.
 * Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
 
-![](img/humidity_monitor.png)
+```
+Funciona !!
+Soil Moisture:
+123
+```
 
 ### 4. Conectar y probar el sensor de luz
 
