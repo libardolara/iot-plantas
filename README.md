@@ -76,6 +76,7 @@ Conecta la tarjeta ESP8266 con el sensor de humedad, el transductor y las resist
 * Espera la compilación del programa, si falla vuelve a intentarlo cambiando de puerto en el IDE.
 * Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
 
+Ejemplo:
 ```
 Funciona !!
 Soil Moisture:
@@ -84,11 +85,34 @@ Soil Moisture:
 
 ### 4. Conectar y probar el sensor de luz
 
+Conecta el dispositivo creado en el punto anterior con el sensor de luz. (Antes desconecta el puerto USB) 
+Sigue el diagrama:
+
+![](img/diagram_light.png)
+
+* Conecta la tarjeta a tu puerto USB
+* Abre el archivo [](codes/light_sensor.ccp), copia el contenido y pegalo reemplazando el código del editod el Arduino IDE
+* Haz click en el boto de ejecutar el código.
+* Espera la compilación del programa, si falla vuelve a intentarlo cambiando de puerto en el IDE.
+* Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
+
+Ejemplo:
+```
+Nivel de iluminacion: 243 lx
+```
+
 
 ### 5. Crear el servicio IoT Platform
 
+* En el catalogo de IBM Cloud, haz click en la categoria _Kits de Iniciador_ (Starter Kits)
+* Haz click en el kit **Internet of Things Platform Starter** el cual aparte de crear el servicio de IoT Platform, crea y asocia una aplicación desarrollada en Node-RED con una base de datos Cloudant.
+* Dale un nombre a tu aplicación que sea unico y pueda ser usado como subdominio.
+* Haz click en _Crear_
+* Mientras tu aplicación se inicializa, haz click en el menú de la izquierda, Conexiones (Connections)
+* Haz click en el servicio de tipo **Internet of Things Platform**
 
 ### 6. Registro del dispositivo
+
 
 
 ### 7. Crear tableros
