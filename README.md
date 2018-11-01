@@ -67,7 +67,7 @@ Conecta la tarjeta ESP8266 con el sensor de humedad, el transductor y las resist
 ![](img/diagram_humidity.png)
 
 * Conecta la tarjeta a tu puerto USB
-* Abre el archivo [Snippets/humidity_sensor.ccp](Snippets/humidity_sensor.ccp), copia el contenido y pegalo en el editor del Arduino IDE
+* Abre el archivo [Snippets/humidity_sensor.cpp](Snippets/humidity_sensor.cpp), copia el contenido y pegalo en el editor del Arduino IDE
 * Ve al menú _Herramientas -> Port... ->_ y selecciona un puerto USB (COM*)
 
 > Si utilizas MacOS instala primero el driver para usar el puerto USB de https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
@@ -91,7 +91,7 @@ Sigue el diagrama:
 ![](img/diagram_light.png)
 
 * Conecta la tarjeta a tu puerto USB
-* Abre el archivo [Snippets/light_sensor.ccp](Snippets/light_sensor.ccp), copia el contenido y pegalo reemplazando el código del editod el Arduino IDE
+* Abre el archivo [Snippets/light_sensor.cpp](Snippets/light_sensor.cpp), copia el contenido y pegalo reemplazando el código del editod el Arduino IDE
 * Haz click en el boto de ejecutar el código.
 * Espera la compilación del programa.
 * Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
@@ -144,7 +144,7 @@ Descriptive Location: Indoors
 * Antes de continuar a configurar la tarjeta debemos configurar la seguridad para no usar certificados de seguridad en esta aplicación. Haz click en el icono de un candado en el menú de la izquierda.
 * Haz click en el icono de editar (Forma de un Lapíz)
 * Selecciona el nivel de seguridad a **TLS Optional** y haz click en el boton de refrescar las politicas (Refresh compliance)
-* Vamos a probar todo el dispositivo con los sensores. Abre el archivo [Snippets/total_snippet.ccp](Snippets/total_snippet.ccp) copia el contenido y pegalo reemplazando todo el codigo en el Arduino IDE.
+* Vamos a probar todo el dispositivo con los sensores. Abre el archivo [Snippets/total_snippet.cpp](Snippets/total_snippet.cpp) copia el contenido y pegalo reemplazando todo el codigo en el Arduino IDE.
 * Modifica las variables customizables para poder conectarte al Wifi, como el **ssid** y el **password**
 > El ssid es el nombre de la red, es sensible a mayusculas.
 
