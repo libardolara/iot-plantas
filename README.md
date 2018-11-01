@@ -93,7 +93,7 @@ Sigue el diagrama:
 * Conecta la tarjeta a tu puerto USB
 * Abre el archivo [](codes/light_sensor.ccp), copia el contenido y pegalo reemplazando el código del editod el Arduino IDE
 * Haz click en el boto de ejecutar el código.
-* Espera la compilación del programa, si falla vuelve a intentarlo cambiando de puerto en el IDE.
+* Espera la compilación del programa.
 * Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas del sensor de humedad
 
 Ejemplo:
@@ -113,6 +113,60 @@ Nivel de iluminacion: 243 lx
 
 ### 6. Registro del dispositivo
 
+Usaremos el servicio de IoT Platform para crear un dispositivo dentro de nuestro sistema, para poder gestionarlo y recibir la información que este envie a la nube.
+
+* Haz click en el botón _Launch_ 
+* En la esquina superior derecha, haz click en el boton _Add Device_
+* En el campo _Device Type_ escribe `ESP8266-MONITOR`
+* En el campo _Device ID_ escribe un ID especifico, por ejemplo `M-4371`
+
+> Estos campos son de identificación del dispositivo, por lo cual los usaremos para autenticarnos a la plataforma desde las tarjetas ESP8266
+
+* Haz click en _Next_
+* La plataforma nos da la opción de especificar mas información del dispositivo como; numero serial, modelo, descripcion, version del hardaware, etc. Esta es información que generalmenta la indrustria usa para administrar y certificar sus dispositivos.
+
+Ejemplo:
+```
+Serial Number: 3186229960
+Model: ESP-12E
+Description: Monitor de Plantas
+Hardware Version: 00001
+Manufacturer: Node MCU
+Device Class: Tarjeta MCU
+Firmware Version: 00001
+Descriptive Location: Indoors
+```
+
+* Haz click en _Next_
+* En la pestaña de seguridad usaremos el defecto, que genera automaticamente un token. Haz click en _Next_
+* Termina el registro de tu dispositivo haciendo click en _Done_
+* El sistema solo te dejará ver token de seguridad una vez. Anota el `Organization ID, Device Type, Device ID y Authentication Token` que seran nuestra informacion de autenticación desde el dispositivo.
+* Antes de continuar a configurar la tarjeta debemos configurar la seguridad para no usar certificados de seguridad en esta aplicación. Haz click en el icono de un candado en el menú de la izquierda.
+* Haz click en el icono de editar (Forma de un Lapíz)
+* Selecciona el nivel de seguridad a **TLS Optional** y haz click en el boton de refrescar las politicas (Refresh compliance)
+* Vamos a probar todo el dispositivo con los sensores. Abre el archivo [](codes/total_snippet.ccp) copia el contenido y pegalo reemplazando todo el codigo en el Arduino IDE.
+* Modifica las variables customizables para poder conectarte al Wifi, como el **ssid** y el **password**
+> El ssid es el nombre de la red, es sensible a mayusculas.
+
+Ejemplo:
+```c++
+const char* ssid = "RedWifi";
+const char* password = "miclave";
+```
+
+* Modifica las variables customizables para poder conectarte al IoT Platform, como el **ORG**, **DEVICE_TYPE**, **DEVICE_ID** y **TOKEN**
+
+Ejemplo
+```c++
+#define ORG "1wmrzl"
+#define DEVICE_TYPE "ESP8266-MONITOR"
+#define DEVICE_ID "M-4371"
+#define TOKEN "xQWE123!asd&00"
+```
+
+* Haz click en el boto de ejecutar el código.
+* Espera la compilación del programa.
+* Cuando la compilación termine exitosamente al 100% ve al menú _Herramientas -> Monitor Serial_ para revisar las lecturas de los sensores.
 
 
 ### 7. Crear tableros
