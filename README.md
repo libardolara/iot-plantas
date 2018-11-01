@@ -1,5 +1,7 @@
 # IoT Platform en monitoreo de plantas
 
+> Presentación [IoT Platform en monitoreo de plantas](https://ibm.box.com/v/iot-plantas)
+
 Este tutorial muestra como poder unir un dispositivo de IoT como Node MCU, Arduino, Raspberry Pi, etc. con los servicios en IBM Cloud. El tutorial tiene como objetivo de realizar un sistema de monitoreo de plantas, con sensores de humedad y de luminicidad, que permita visualizar el estado actual y configurar reglas y alertas tempranas.
 
 Después de terminar este tutorial usted entenderá como: 
@@ -171,6 +173,29 @@ Ejemplo
 
 ### 7. Crear tableros
 
+* Vuelve a **IoT Platform**, haz click en el primer icono del menú de la izquierda.
+* Haz click en el bóton _Create New Board_
+* Dale un nombre a tu Tablero.
+* Dale un descripción al Tablero (Opcional)
+* Haz click en _Next_
+* En el tab de _Miembros_ no vamos a agregar colaboradores al Tablero, haz click en el boton _Submit_
+* Una vez creado el Tablero vamos a crear graficos (Cards)
+* Haz click en el link para agregar una tarjeta (Addin a Card)
+* Escoge el tipo de grafico **Line Chart**
+* En dispositivos (Devices) selecciona el dispositivo que creamos. 
+* Haz click en conectar con un nuevo data set.
+* Crea el grafico para el nivel de iluminación
+
+Ejemplo:
+```
+Event: status
+Property: d.light
+Name: Grafica Nivel Iluminación
+Type: Number
+Unit: lx
+Min: 0
+Max: 2999
+```
 
 ### 8. Crear interfaces
 
