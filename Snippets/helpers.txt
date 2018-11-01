@@ -1,0 +1,35 @@
+
+
+
+https://((((((())))))).internetofthings.ibmcloud.com/api/v0002/logicalinterfaces
+
+https://(((((()))))).internetofthings.ibmcloud.com/api/v0002/draft/logicalinterfaces/(((((((((())))))))))/rules
+
+https://(((((()))))).internetofthings.ibmcloud.com/api/v0002/draft/device/types/((((((((()))))))))/
+
+
+
+{
+	"name":"belowMin",
+	"condition":"$state.d.Logicallight < $instance.metadata.minLight"
+}
+
+
+{
+	"operation":"activate-configuration"
+}
+
+
+
+100 - ( $event.d.humidity - 290 ) * 100 / ( 624 - 290 )
+
+
+
+{
+"maxLight":5000,
+"maxLevel":10,
+"minLevel":90,
+"soWet":30,
+"minLight":5,
+"soDry":70
+}
