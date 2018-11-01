@@ -56,9 +56,9 @@ Se debe configurar el Arduino IDE para trabajar con la tarjeta Node MCU ESP8266 
 #### Agregar librerias
 
 * Ve al menú _Sketch -> Include Library -> Add .ZIP Library..._.
-* Selecciona el archivo [](pubsubclient-2.3.zip) para instalar la libreria de mensajeria MQTT.
+* Selecciona el archivo [lib/pubsubclient-2.3.zip](lib/pubsubclient-2.3.zip) para instalar la libreria de mensajeria MQTT.
 * Ve al menú _Sketch -> Include Library -> Add .ZIP Library..._.
-* Selecciona el archivo [](BH1750-master.zip) para instalar la libreria del sensor de luz.
+* Selecciona el archivo [lib/BH1750-master.zip](lib/BH1750-master.zip) para instalar la libreria del sensor de luz.
 
 ### 3. Conectar y probar el sensor de humedad
 
