@@ -262,6 +262,21 @@ Description: Estado actual de mi planta(humedad en la tierra e iluminación) en 
 * En este punto la interfaz fisica y la logica estan creadas pero aun no estan activas. Para ello haz click en _Activate_
 * Haz click en _Deploy_ para activar y desplegar ambas interfaces.
 
+### 9. Usar Node-RED para acceder a los eventos del dispositivo.
+
+* En el [dashboard](https://console.bluemix.net/dashboard/apps) selecciona la aplicación creada en el numeral 5
+* En la pagina principal de tu aplicación, haz click en **Visit App URL**
+* Completa la configuración de Node RED e ingresa en el editor de flujo.
+* Veras un flujo predeterminado, que sirve para probar varias funcionalidades de la plataforma.
+* Haz doble click en el nodo **IBM IoT App In** 
+* Selecciona _Input Type_ como **Device State Event**
+* Selecciona **All** _Device Type_ y haz click en _Done_
+* Despliega el flujo y observa en la pestaña de **Debug** el estado completo y sin modificar del dispositivo.
+* Haz doble click en el nodo **IBM IoT App In** 
+* Deselecciona la opción **All** _Device Type_ y haz click en _Done_
+* Escribe en la opción **Logical Interface** el alias de la interfaz logica, `plantastt`
+* Observa el resultado en la pestaña **Debug** el estado del dispositivo a traves de la interfaz logica.
+
 
 
 
