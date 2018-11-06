@@ -184,7 +184,7 @@ Ejemplo
 * Escoge el tipo de grafico **Line Chart**
 * En dispositivos (Devices) selecciona el dispositivo que creamos. 
 * Haz click en conectar con un nuevo data set.
-* Crea el grafico para el nivel de iluminación
+* Crea el grafico para el nivel de iluminación llenando los campos requeridos, cuando finalices haz click en _Next_
 
 Ejemplo:
 ```
@@ -194,9 +194,74 @@ Name: Grafica Nivel Iluminación
 Type: Number
 Unit: lx
 Min: 0
-Max: 2999
+Max: 54612
 ```
 
+* Escoge el tamaño del grafico en la previsualización. Usaremos el tamaño **L**
+* Repite los puntos anteriores ppara crear el grafico para el nivel de humedad.
+
+Ejemplo:
+```
+Event: status
+Property: d.humidity
+Name: Grafica Nivel Humedad
+Type: Number
+Unit: 
+Min: 290
+Max: 700
+```
+
+* ¡Ya tenemos graficas en tiempo real!
+
 ### 8. Crear interfaces
+
+Una interfaz física se utiliza para modelar la interfaz entre un dispositivo físico y IoT Platform. Los tipos de suceso se pueden asociar con una interfaz física.
+
+Una interfaz logica es una construcción programática con la que se pueden conectar las aplicaciones, o suscribirse a la misma, para ver el estado de un dispositivo. Una interfaz lógica se utiliza para definir la vista normalizada en el estado de dispositivo en IoT Platform.
+
+* Haz click en _Devices_ en el menú de la izquierda.
+* Haz click en el tab _Device Types_.
+* En el tipo de dispositivo creado, haz click en el tab _Interface_.
+* Haz click en el sub-tab _Advanced Flow_. 
+* Haz click en _Create Physical Interface_ para crear una interfaz fisica.
+* Da un nombre y descripción a la interfaz grafica, haz click _Next_.
+
+Ejemplo:
+```
+Name: ESP8266-MONITOR_PI
+Description: Tarjeta para registrar la iluminación y humedad en mi planta del pasillo.
+```
+
+* Vamos a crear un evento dentro de la interfaz, haz click en _Create event type_
+* Selecciona el evento **status** y haz click en _Add_.
+* Vamos a utilizar solo el evento status, por lo cual vamos a hacer click en _Done_.
+* Ahora vamos a crear una interfaz logica, haz click en _Create Logical Interface_.
+* Llena los datos de nombre, alias y descripción. Haz click en _Next_
+
+Ejemplo:
+```
+Name: ESP8266-MONITOR_LI
+Alias: plantastt
+Description: Estado actual de mi planta(humedad en la tierra e iluminación) en el pasillo de la entrada
+```
+
+* Vamos a crear una nueva propiedad. Haz click _Add new property_
+* Selecciona la propiedad **Light**
+* Dale por nombre a la propiedad **logicallight** y de tipo **Number**. Haz click en _Save_
+* Selecciona la propuedad **humidity**
+* Dale por nombre a la propiedad **logicalhumidity** y de tipo **Number**.
+* Vamos a editar la propiedad usando el _Advanced Editor_ para calcular un porcentaje de humedad relativa.
+
+```
+100 - ( $event.d.humidity - 290 ) * 100 / ( 624 - 290 )
+```
+
+* Haz click en _Save_
+* Con esas dos propiedades vamos a crear la interfaz logica, haz click en _Next_
+* Exiten tres politicas para el envio de las notificaciones desde la interfaz logica; **No Event Notifications** donde no se envian automaticamente (El estado es pedido on-demand usando el REST API), **For State Changes** se envia si hay un cambio del estado y **For All Events** para enviar cada vez que la plataforma recibe un evento del dispositivo. Selecciona la politica **For State Changes** y haz click en _Done_
+* En este punto la interfaz fisica y la logica estan creadas pero aun no estan activas. Para ello haz click en _Activate_
+* Haz click en _Deploy_ para activar y desplegar ambas interfaces.
+
+
 
 
