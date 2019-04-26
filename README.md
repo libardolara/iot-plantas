@@ -1,6 +1,7 @@
 # IoT Platform en monitoreo de plantas
 
 > Presentación [Watson IoT Platform](https://ibm.box.com/v/watson-iot-platform-es)
+
 > Presentación [IoT Platform en monitoreo de plantas](https://ibm.box.com/v/iot-plantas)
 
 
