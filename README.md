@@ -219,6 +219,8 @@ Una interfaz física se utiliza para modelar la interfaz entre un dispositivo f�
 
 Una interfaz logica es una construcción programática con la que se pueden conectar las aplicaciones, o suscribirse a la misma, para ver el estado de un dispositivo. Una interfaz lógica se utiliza para definir la vista normalizada en el estado de dispositivo en IoT Platform.
 
+#### 8.1 Interfaz Fisica
+
 * Haz click en _Devices_ en el menú de la izquierda.
 * Haz click en el tab _Device Types_.
 * En el tipo de dispositivo creado, haz click en el tab _Interface_.
@@ -235,6 +237,9 @@ Description: Tarjeta para registrar la iluminación y humedad en mi planta del p
 * Vamos a crear un evento dentro de la interfaz, haz click en _Create event type_
 * Selecciona el evento **status** y haz click en _Add_.
 * Vamos a utilizar solo el evento status, por lo cual vamos a hacer click en _Done_.
+
+#### 8.2 Interfaz Logica
+
 * Ahora vamos a crear una interfaz logica, haz click en _Create Logical Interface_.
 * Llena los datos de nombre, alias y descripción. Haz click en _Next_
 
