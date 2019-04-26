@@ -20,9 +20,9 @@ El servicio de Internet of Things Platform permite
 
 ## Componentes Incluidos
 
-* [Internet of Things Platform](https://console.bluemix.net/catalog/services/internet-of-things-platform): Permite comunicarse y consumir datos de dispositivos conectados y gateways.
+* [Internet of Things Platform](https://cloud.ibm.com/catalog/services/internet-of-things-platform): Permite comunicarse y consumir datos de dispositivos conectados y gateways.
 * [Node-RED](https://nodered.org/): Es un framework Open Source que permite construir aplicaciones basdas en flujos y eventos.
-* [Cloudant](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db): Una base de datos completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
+* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant): Una base de datos completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software): Software Open Source que facilita escribir código y cargarlo en la board
 
 
@@ -272,7 +272,7 @@ Description: Estado actual de mi planta(humedad en la tierra e iluminación) en 
 
 ### 9. Usar Node-RED para acceder a los eventos del dispositivo.
 
-* En el [dashboard](https://console.bluemix.net/dashboard/apps) selecciona la aplicación creada en el numeral 5
+* En el [dashboard](https://cloud.ibm.com/resources) selecciona la aplicación creada en el numeral 5
 * En la pagina principal de tu aplicación, haz click en **Visit App URL**
 * Completa la configuración de Node RED e ingresa en el editor de flujo.
 * Veras un flujo predeterminado, que sirve para probar varias funcionalidades de la plataforma.
