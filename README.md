@@ -2,7 +2,7 @@
 
 > Presentación [Watson IoT Platform](https://ibm.box.com/v/watson-iot-platform-es)
 
-> Presentación [IoT Platform en monitoreo de plantas](https://ibm.box.com/v/iot-plantas)
+> Presentación [IoT Platform en monitoreo de plantas](https://ibm.box.com/v/ibm-iot-plantas)
 
 
 Este tutorial muestra como poder unir un dispositivo de IoT como Node MCU, Arduino, Raspberry Pi, etc. con los servicios en IBM Cloud. El tutorial tiene como objetivo de realizar un sistema de monitoreo de plantas, con sensores de humedad y de luminicidad, que permita visualizar el estado actual y configurar reglas y alertas tempranas.
